@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diego Rojas - Calculando el total</title>
+
+  <!-- hoja de estilo css -->
+  <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+
+<body>
+
+  <article class="main-container">
+    <div class="product-card">
+      <header>
+        <figure>
+          <img src="assets/img/godzillaflame_snapback.jpg" alt="gorra color negro con letras rojas con amarillo">
+        </figure>
+        <h2></h2>
+        <span>CLP 29.990</span>
+      </header>
+      <br>
+    </div>
+    <form id="user-form">
+      <div class="main-card">
+        <div class="picture">
+          <label for="quantity">Cantidad:</label>
+          <input type="number" name="quantity" id="quantity" value="1" min="1" max="20">
+        </div>
+        <div class="user-colors">
+          <label for="color">Color:</label>
+          <input type="color" name="color" id="color" list="presets" value="#94ADD7">
+        </div>
+      </div>
+      <br>
+      <button id="btn-total" onclick="calculator(event)">
+        Precio Final
+      </button>
+    </form>
+  </article>
+
+  <footer id="user-total">
+    <p>Total: <span id="total"></span></p>
+    <p>Cantidad: <span id="qty-final"></span></p>
+    <div class="color-container">
+      <p>Color:</p>
+      <div class="color-box" id="user-color"></div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
